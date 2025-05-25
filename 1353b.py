@@ -14,12 +14,12 @@ for _ in range(int(input())):
         num=sum(l2),sum(l1)
     print(num)'''
 
-    l2 = sorted(l2, reverse=True)  # Sort l2 in descending order for easier swapping
+    l2 = sorted(l2, reverse=True)  
 
-    for i in range(min(k, m)):  # Ensure we don't exceed the length of the lists
-        if l1[i] < l2[i]:  # Only swap if it increases the sum of l1
+    for i in range(min(k, m)):  
+        if l1[i] < l2[i]: 
             l1[i], l2[i] = l2[i], l1[i]
         else:
-            break  # Stop swapping if no further improvement is possible
+            break  
 
-    print(max(sum(l2),sum(l1)))  # Print the sum of the modified l1 for each test case
+    print(max(sum(l2),sum(l1))) 
